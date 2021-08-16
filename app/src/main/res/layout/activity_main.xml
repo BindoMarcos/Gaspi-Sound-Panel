@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-5766982615688532/6721451017"/>
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
         //Value pruebas: ca-app-pub-3940256099942544/6300978111
         //Value final: ca-app-pub-5766982615688532/6721451017
 

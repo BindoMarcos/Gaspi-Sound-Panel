@@ -13,7 +13,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 
 class MainActivity : AppCompatActivity() {
     private var adIntersicial: InterstitialAd? = null
-    private final var TAG = "MainActivity"
+    private var TAG = "INTAD"
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -24,10 +24,11 @@ class MainActivity : AppCompatActivity() {
         val adMain=findViewById<AdView>(R.id.adMain)
         val adRequest = AdRequest.Builder().build()
         adMain.loadAd(adRequest)
-
-        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest, object : InterstitialAdLoadCallback() {
+        //value final: ca-app-pub-5766982615688532/1985753795
+        //Value Prueba: ca-app-pub-3940256099942544/1033173712
+        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712" ,adRequest, object : InterstitialAdLoadCallback() {
             override fun onAdFailedToLoad(adError: LoadAdError) {
-                Log.d(TAG, adError?.message)
+                Log.d(TAG, adError.message)
                 adIntersicial = null
             }
 
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        adIntersicial?.fullScreenContentCallback = object: FullScreenContentCallback() {
+        /*adIntersicial?.fullScreenContentCallback = object: FullScreenContentCallback() {
             override fun onAdDismissedFullScreenContent() {
                 Log.d(TAG, "Ad was dismissed.")
             }
@@ -48,10 +49,10 @@ class MainActivity : AppCompatActivity() {
 
             override fun onAdShowedFullScreenContent() {
                 Log.d(TAG, "Ad showed fullscreen content.")
-                adIntersicial = null;
+                adIntersicial = null
             }
         }
-
+*/
 
 
         val buenas = findViewById<Button>(R.id.bBuenas)
@@ -88,7 +89,6 @@ class MainActivity : AppCompatActivity() {
         val Trans= findViewById<Button>(R.id.bTrans)
 
         val BotonRedes= findViewById<Button>(R.id.bRedes)
-
 
         buenas.setOnClickListener {
             val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.buenas)
@@ -226,10 +226,16 @@ class MainActivity : AppCompatActivity() {
             val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.transexual)
             mediaPlayer?.start()
         }
+
         BotonRedes.setOnClickListener {
             val intent = Intent(this, Redes::class.java)
             startActivity(intent)
         }
 
+        if (BotonRedes.isPressed) {
+            adIntersicial?.show(this)
+        } else {
+            Log.d("TAG", "The interstitial ad wasn't ready yet.")
+        }
     }
 }
