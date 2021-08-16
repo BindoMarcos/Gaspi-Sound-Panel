@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+        ads:adUnitId="ca-app-pub-5766982615688532/6721451017"/>
         //Value pruebas: ca-app-pub-3940256099942544/6300978111
         //Value final: ca-app-pub-5766982615688532/6721451017
 
@@ -82,7 +82,7 @@
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/botonsonidos"
                 android:text="TE \n Pego"
-                app:layout_constraintEnd_toStartOf="@+id/bLindaMañana"
+                app:layout_constraintEnd_toStartOf="@+id/bLindaManana"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/bBuenas" />
@@ -116,7 +116,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/bBoliviano" />
 
             <Button
-                android:id="@+id/bLindaMañana"
+                android:id="@+id/bLindaManana"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="24dp"
@@ -197,7 +197,7 @@
                 android:background="@drawable/botonsonidos"
                 android:text="Anibal \n Fernandez"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bLindaMañana" />
+                app:layout_constraintTop_toBottomOf="@+id/bLindaManana" />
 
             <Button
                 android:id="@+id/bFernanflo2"
