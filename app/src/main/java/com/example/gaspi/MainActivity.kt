@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        /*adIntersicial?.fullScreenContentCallback = object: FullScreenContentCallback() {
+        adIntersicial?.fullScreenContentCallback = object: FullScreenContentCallback() {
             override fun onAdDismissedFullScreenContent() {
                 Log.d(TAG, "Ad was dismissed.")
             }
@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() {
                 adIntersicial = null
             }
         }
-*/
 
 
         val buenas = findViewById<Button>(R.id.bBuenas)
@@ -87,155 +86,157 @@ class MainActivity : AppCompatActivity() {
         val Suscribite = findViewById<Button>(R.id.bSub)
         val Suculini = findViewById<Button>(R.id.bSuculini)
         val Trans= findViewById<Button>(R.id.bTrans)
-
         val BotonRedes= findViewById<Button>(R.id.bRedes)
 
-        buenas.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.buenas)
-            mediaPlayer?.start()
-        }
+        fun Botonera() {
 
-        fiumba.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.fiumba)
-            mediaPlayer?.start()
-        }
+            buenas.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.buenas)
+                mediaPlayer?.start()
+            }
 
-        Despertarse.setOnClickListener{
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.a_despertarse)
-            mediaPlayer?.start()
-        }
+            fiumba.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.fiumba)
+                mediaPlayer?.start()
+            }
 
-        Boliviano.setOnClickListener{
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.boliviano)
-            mediaPlayer?.start()
-        }
+            Despertarse.setOnClickListener{
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.a_despertarse)
+                mediaPlayer?.start()
+            }
 
-        BuenosDias.setOnClickListener{
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.buenos_dias)
-            mediaPlayer?.start()
-        }
+            Boliviano.setOnClickListener{
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.boliviano)
+                mediaPlayer?.start()
+            }
 
-        LindaManana.setOnClickListener{
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.linda_manana)
-            mediaPlayer?.start()
-        }
+            BuenosDias.setOnClickListener{
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.buenos_dias)
+                mediaPlayer?.start()
+            }
 
-        TePego.setOnClickListener{
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.te_pego)
-            mediaPlayer?.start()
-        }
+            LindaManana.setOnClickListener{
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.linda_manana)
+                mediaPlayer?.start()
+            }
 
-        VamosArriba.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.vamos_arriba)
-            mediaPlayer?.start()
-        }
+            TePego.setOnClickListener{
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.te_pego)
+                mediaPlayer?.start()
+            }
 
-        Anibal.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.anibal_fernandez)
-            mediaPlayer?.start()
-        }
-        Chumba.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.chumba)
-            mediaPlayer?.start()
-        }
-        ComoTeVa.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.como_te_va)
-            mediaPlayer?.start()
-        }
-        Muro1.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.el_muro_infernal)
-            mediaPlayer?.start()
-        }
-        Muro2.setOnClickListener{
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.muro_infernal_2)
-            mediaPlayer?.start()
-        }
-        Fernanflo1.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.fernanflo)
-            mediaPlayer?.start()
-        }
-        Fernanflo2.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.fernanflo_2)
-            mediaPlayer?.start()
-        }
-        German.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.german_garmendia)
-            mediaPlayer?.start()
-        }
-        FinalFeliz.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.final_feliz)
-            mediaPlayer?.start()
-        }
-        PL.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.paulo_londra)
-            mediaPlayer?.start()
-        }
-        PLTrans.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.paulo_londra_trans)
-            mediaPlayer?.start()
-        }
-        BuenasATodos.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.muy_buenas_a_todos)
-            mediaPlayer?.start()
-        }
-        Paraguayo.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.paraguayo)
-            mediaPlayer?.start()
-        }
-        Pes1.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.pro_evolution_soccer)
-            mediaPlayer?.start()
-        }
-        Pes2.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.pro_evolution_soccer_2)
-            mediaPlayer?.start()
-        }
-        Quiencianera.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.quincianera)
-            mediaPlayer?.start()
-        }
-        Sambabam.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.sambabam)
-            mediaPlayer?.start()
-        }
-        Silvia.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.silvia)
-            mediaPlayer?.start()
-        }
-        Silvina.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.silvina_escudero)
-            mediaPlayer?.start()
-        }
-        Siuk.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.siuk)
-            mediaPlayer?.start()
-        }
-        Socrates.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.socrates)
-            mediaPlayer?.start()
-        }
-        Suscribite.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.sub_a_la_p)
-            mediaPlayer?.start()
-        }
-        Suculini.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.suculini)
-            mediaPlayer?.start()
-        }
-        Trans.setOnClickListener {
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.transexual)
-            mediaPlayer?.start()
-        }
+            VamosArriba.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.vamos_arriba)
+                mediaPlayer?.start()
+            }
 
-        BotonRedes.setOnClickListener {
-            val intent = Intent(this, Redes::class.java)
-            startActivity(intent)
-        }
+            Anibal.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.anibal_fernandez)
+                mediaPlayer?.start()
+            }
+            Chumba.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.chumba)
+                mediaPlayer?.start()
+            }
+            ComoTeVa.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.como_te_va)
+                mediaPlayer?.start()
+            }
+            Muro1.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.el_muro_infernal)
+                mediaPlayer?.start()
+            }
+            Muro2.setOnClickListener{
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.muro_infernal_2)
+                mediaPlayer?.start()
+            }
+            Fernanflo1.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.fernanflo)
+                mediaPlayer?.start()
+            }
+            Fernanflo2.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.fernanflo_2)
+                mediaPlayer?.start()
+            }
+            German.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.german_garmendia)
+                mediaPlayer?.start()
+            }
+            FinalFeliz.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.final_feliz)
+                mediaPlayer?.start()
+            }
+            PL.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.paulo_londra)
+                mediaPlayer?.start()
+            }
+            PLTrans.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.paulo_londra_trans)
+                mediaPlayer?.start()
+            }
+            BuenasATodos.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.muy_buenas_a_todos)
+                mediaPlayer?.start()
+            }
+            Paraguayo.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.paraguayo)
+                mediaPlayer?.start()
+            }
+            Pes1.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.pro_evolution_soccer)
+                mediaPlayer?.start()
+            }
+            Pes2.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.pro_evolution_soccer_2)
+                mediaPlayer?.start()
+            }
+            Quiencianera.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.quincianera)
+                mediaPlayer?.start()
+            }
+            Sambabam.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.sambabam)
+                mediaPlayer?.start()
+            }
+            Silvia.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.silvia)
+                mediaPlayer?.start()
+            }
+            Silvina.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.silvina_escudero)
+                mediaPlayer?.start()
+            }
+            Siuk.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.siuk)
+                mediaPlayer?.start()
+            }
+            Socrates.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.socrates)
+                mediaPlayer?.start()
+            }
+            Suscribite.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.sub_a_la_p)
+                mediaPlayer?.start()
+            }
+            Suculini.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.suculini)
+                mediaPlayer?.start()
+            }
+            Trans.setOnClickListener {
+                val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.transexual)
+                mediaPlayer?.start()
+            }
 
-        if (BotonRedes.isPressed) {
-            adIntersicial?.show(this)
-        } else {
-            Log.d("TAG", "The interstitial ad wasn't ready yet.")
+            BotonRedes.setOnClickListener {
+                val intent = Intent(this, Redes::class.java)
+                startActivity(intent)
+            }
         }
+        Botonera()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        adIntersicial?.show(this)
     }
 }
