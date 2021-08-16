@@ -3,12 +3,15 @@ package com.example.gaspi
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,10 +24,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         MobileAds.initialize(this){}
-
         val adMain=findViewById<AdView>(R.id.adMain)
         val adRequest = AdRequest.Builder().build()
         adMain.loadAd(adRequest)
+
+        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest, object : InterstitialAdLoadCallback() {
+            override fun onAdFailedToLoad(adError: LoadAdError) {
+                Log.d(TAG, adError?.message)
+                adIntersicial = null
+            }
+
+            override fun onAdLoaded(interstitialAd: InterstitialAd) {
+                Log.d(TAG, "Ad cargada correctamente")
+                adIntersicial = interstitialAd
+            }
+        })
 
         val buenas = findViewById<Button>(R.id.bBuenas)
         val fiumba =findViewById<Button>(R.id.bFiumba)
