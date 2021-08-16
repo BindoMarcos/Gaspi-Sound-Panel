@@ -8,9 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.interstitial.InterstitialAd
 
 
 class MainActivity : AppCompatActivity() {
+    private var adIntersicial: InterstitialAd? = null
+    private final var TAG = "MainActivity"
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)

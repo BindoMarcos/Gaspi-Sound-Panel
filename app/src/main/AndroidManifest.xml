@@ -17,7 +17,8 @@
 
 
 
-        <activity android:name=".Redes"/>
+        <activity android:name=".Redes"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
