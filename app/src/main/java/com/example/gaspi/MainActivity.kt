@@ -3,19 +3,13 @@ package com.example.gaspi
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.ads.*
-import com.google.android.gms.ads.interstitial.InterstitialAd
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-    private var adIntersicial: InterstitialAd? = null
-    private var TAG = "IntAd"
-
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -25,33 +19,6 @@ class MainActivity : AppCompatActivity() {
         val adMain=findViewById<AdView>(R.id.adMain)
         val adRequest = AdRequest.Builder().build()
         adMain.loadAd(adRequest)
-        //value final: ca-app-pub-5766982615688532/1985753795
-        //Value Prueba: ca-app-pub-3940256099942544/1033173712
-        InterstitialAd.load(this,"ca-app-pub-5766982615688532/1985753795" ,adRequest, object : InterstitialAdLoadCallback() {
-            override fun onAdFailedToLoad(adError: LoadAdError) {
-                Log.d(TAG, adError.message)
-                adIntersicial = null
-            }
-
-            override fun onAdLoaded(interstitialAd: InterstitialAd) {
-                Log.d(TAG, "Ad cargada correctamente")
-                adIntersicial = interstitialAd
-            }
-        })
-
-        adIntersicial?.fullScreenContentCallback = object: FullScreenContentCallback() {
-            override fun onAdDismissedFullScreenContent() {
-                Log.d(TAG, "Ad was dismissed.")
-            }
-
-            override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
-                Log.d(TAG, "Ad failed to show.")
-            }
-            override fun onAdShowedFullScreenContent() {
-                Log.d(TAG, "Ad showed fullscreen content.")
-                adIntersicial = null
-            }
-        }
 
         val botones = arrayOf(bFiumba,bVamosArriba,bDespertarse,bBoliviano,bBuenas,bBuenosDias,bTePego,bLindaManana,
             bChumba,bAnibalFernandez,bComoTeVa,bMuro1,bFernanflo1,bFernanflo2,bFinalFeliz,bGerman,bPL,bPLTrans,bParaguayo,
@@ -228,8 +195,4 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-    override fun onResume() {
-        super.onResume()
-        adIntersicial?.show(this)
-    }
 }

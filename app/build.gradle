@@ -10,7 +10,7 @@ android {
         applicationId "com.botonera.gaspi"
         minSdk 26
         targetSdk 30
-        versionCode 2
+        versionCode 8
         versionName "1.1"
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
