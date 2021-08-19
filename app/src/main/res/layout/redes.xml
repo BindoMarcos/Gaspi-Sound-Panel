@@ -8,17 +8,30 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="-22dp">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primaryColor"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        app:titleTextColor="@color/primaryTextColor" />
+
     <Button
         android:id="@+id/bTTGaspi"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="6dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="68dp"
         android:background="@drawable/botontiktok"
         app:layout_constraintEnd_toStartOf="@+id/bIGcreador"
-        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
@@ -71,11 +84,11 @@
         android:id="@+id/bIGcreador"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="36dp"
         android:background="@drawable/botoninstagram"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -105,20 +118,6 @@
         app:layout_constraintTop_toBottomOf="@+id/bIGcreador" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Redes Sociales"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -140,7 +139,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-5766982615688532/3095902905"/>
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
         //Value pruebas: ca-app-pub-3940256099942544/6300978111
         //Value final: ca-app-pub-5766982615688532/3095902905
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,17 +3,25 @@ package com.example.gaspi
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.google.android.gms.ads.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+    val toolbar: Toolbar? = null
 
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        toolbar?.setTitle(R.string.app_name)
+        setSupportActionBar(toolbar)
 
         MobileAds.initialize(this){}
         val adMain=findViewById<AdView>(R.id.adMain)
@@ -23,8 +31,6 @@ class MainActivity : AppCompatActivity() {
         val botones = arrayOf(bFiumba,bVamosArriba,bDespertarse,bBoliviano,bBuenas,bBuenosDias,bTePego,bLindaManana,
             bChumba,bAnibalFernandez,bComoTeVa,bMuro1,bFernanflo1,bFernanflo2,bFinalFeliz,bGerman,bPL,bPLTrans,bParaguayo,
             bBuenasATodos,bMuro2,bPES1,bPES2,bQuinciañera,bSambabam,bSilvia,bSilvina,bSiuk,bSocrates,bSub,bSuculini,bTrans)
-
-        val botonRedes= findViewById<Button>(R.id.bRedes)
 
         /* Lista numeros botones
         buenas = 0
@@ -189,10 +195,20 @@ class MainActivity : AppCompatActivity() {
                 mediaPlayer?.start()
             }
 
-            botonRedes.setOnClickListener {
+        }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item?.itemId){
+            R.id.bredes ->{
                 val intent = Intent(this, Redes::class.java)
                 startActivity(intent)
             }
         }
-
+        return super.onOptionsItemSelected(item)
+    }
 }

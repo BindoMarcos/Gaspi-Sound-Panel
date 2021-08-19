@@ -15,10 +15,6 @@
         android:fullBackupContent="@xml/backup_descriptor"
         tools:targetApi="p">
 
-
-
-        <activity android:name=".Redes"
-            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -28,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Redes"
+            android:parentActivityName=".MainActivity"/>
 
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
