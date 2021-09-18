@@ -32,10 +32,10 @@
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
 
-        <!-- TODO: ca-app-pub-5766982615688532~9505179410 -->
+        <!-- TODO: ca-app-pub-1823073218213413~9376978448 -->
         <meta-data
             android:name="com.google.android.gms.ads.application_id"
-            android:value="ca-app-pub-5766982615688532~9505179410" />
+            android:value="ca-app-pub-1823073218213413~9376978448" />
     </application>
 
 </manifest>

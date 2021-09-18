@@ -7,31 +7,36 @@ import android.view.Menu
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 class Redes : AppCompatActivity() {
-
-    val toolbar: Toolbar? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.redes)
 
+        MobileAds.initialize(this) {}
+        val adMain = findViewById<AdView>(R.id.adRedes)
+        val adRequest = AdRequest.Builder().build()
+        adMain.loadAd(adRequest)
+
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        toolbar.setTitle("Redes Sociales")
+        toolbar.title = "Redes Sociales"
         setSupportActionBar(toolbar)
 
-        var actionBar = supportActionBar
+        val actionBar = supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)
 
         val ytGaspi = Intent(Intent.ACTION_VIEW, Uri.parse("http://youtube.com/c/GaspiPD"))
         val ttGaspi= Intent(Intent.ACTION_VIEW, Uri.parse("http://www.tiktok.com/@gaspipd"))
         val igGaspi= Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/gaspipd"))
-        val igCreador= Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/marcos.bindo"))
+        //val igCreador= Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/marcos.bindo"))
 
         val bYTgaspi=findViewById<Button>(R.id.bYTGaspi)
         val bTTgaspi=findViewById<Button>(R.id.bTTGaspi)
         val bIGaspi=findViewById<Button>(R.id.bIGGaspi)
-        val bIGcreador= findViewById<Button>(R.id.bIGcreador)
+        //val bIGcreador= findViewById<Button>(R.id.bIGcreador)
 
         bYTgaspi.setOnClickListener{
             startActivity(ytGaspi)
@@ -42,9 +47,10 @@ class Redes : AppCompatActivity() {
         bIGaspi.setOnClickListener {
             startActivity(igGaspi)
         }
-        bIGcreador.setOnClickListener {
+
+        /*bIGcreador.setOnClickListener {
             startActivity(igCreador)
-        }
+        }*/
 
 
     }
