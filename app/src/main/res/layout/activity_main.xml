@@ -38,23 +38,23 @@
 
 
     <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="0dp"
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:background="@color/primaryLightColor"
         app:layout_constraintBottom_toTopOf="@+id/adMain"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="729dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
             android:columnCount="2"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteY="1dp">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/bFiumba"
@@ -248,20 +248,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/bComoTeVa" />
 
             <Button
-                android:id="@+id/bPL"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_margin="24dp"
-                android:layout_marginStart="24dp"
-                android:background="@drawable/botonsonidos"
-                android:text="Paulo \n Londra"
-                app:layout_constraintEnd_toStartOf="@+id/bPLTrans"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bFinalFeliz" />
-
-            <Button
                 android:id="@+id/bMuro2"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -340,6 +326,7 @@
                 android:layout_marginStart="24dp"
                 android:background="@drawable/botonsonidos"
                 android:text="suculini"
+                android:textColor="#000000"
                 app:layout_constraintEnd_toStartOf="@+id/bTrans"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -384,6 +371,20 @@
                 android:text="German \n Garmendia"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/bFernanflo2" />
+
+            <Button
+                android:id="@+id/bPL"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="24dp"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/botonsonidos"
+                android:text="Paulo \n Londra"
+                app:layout_constraintEnd_toStartOf="@+id/bPLTrans"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bFinalFeliz" />
 
             <Button
                 android:id="@+id/bPLTrans"
@@ -504,6 +505,102 @@
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/botonsonidos"
                 android:text="Es \n Increible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bTrans" />
+
+            <Button
+                android:id="@+id/bBuenisimo1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/botonsonidos"
+                android:text="Buenisimo 1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bTrans" />
+
+            <Button
+                android:id="@+id/bComoEstan"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/botonsonidos"
+                android:text="como estan \n che?"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bTrans" />
+
+            <Button
+                android:id="@+id/bDecirHoy"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/botonsonidos"
+                android:text="Lo que te \n voy a decir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bTrans" />
+
+            <Button
+                android:id="@+id/bMirandolos"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/botonsonidos"
+                android:text="Voy a estar \n mirandolos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bTrans" />
+
+            <Button
+                android:id="@+id/bQuieroVerlos"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/botonsonidos"
+                android:text="Quiero \n verlos \n a todos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bTrans" />
+
+            <Button
+                android:id="@+id/bRisa1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/botonsonidos"
+                android:text="Risa 1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bTrans" />
+
+            <Button
+                android:id="@+id/bSi"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/botonsonidos"
+                android:text="Siii"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bTrans" />
+
+            <Button
+                android:id="@+id/bBuenisimo2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/botonsonidos"
+                android:text="Buenisimo 2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/bTrans" />
 

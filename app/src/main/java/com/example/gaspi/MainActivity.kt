@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        layout = findViewById(R.id.scrollView2)
+        layout = findViewById(R.id.scrollView)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         toolbar?.setTitle(R.string.app_name)
@@ -65,6 +65,15 @@ class MainActivity : AppCompatActivity() {
         val trans = findViewById<Button>(R.id.bTrans)
         val afrodisiaco = findViewById<Button>(R.id.bAfrodisiaco)
         val increible = findViewById<Button>(R.id.bIncreible)
+        val buenisimo1 = findViewById<Button>(R.id.bBuenisimo1)
+        val buenisimo2 = findViewById<Button>(R.id.bBuenisimo2)
+        val comoEstanChe = findViewById<Button>(R.id.bComoEstan)
+        val loQueTeVoyADecir = findViewById<Button>(R.id.bDecirHoy)
+        val mirandolos = findViewById<Button>(R.id.bMirandolos)
+        val quieroVerlos = findViewById<Button>(R.id.bQuieroVerlos)
+        val risa1 = findViewById<Button>(R.id.bRisa1)
+        val sii = findViewById<Button>(R.id.bSi)
+
 
         fiumba.setOnClickListener {
             val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.fiumba)
@@ -202,7 +211,40 @@ class MainActivity : AppCompatActivity() {
             val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.increible)
             mediaPlayer?.start()
         }
-
+        buenisimo1.setOnClickListener {
+            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.buenisimo1)
+            mediaPlayer?.start()
+        }
+        buenisimo2.setOnClickListener {
+            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.buenisimo2)
+            mediaPlayer?.start()
+        }
+        comoEstanChe.setOnClickListener {
+            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.como_estan_che)
+            mediaPlayer?.start()
+        }
+        loQueTeVoyADecir.setOnClickListener {
+            val mediaPlayer: MediaPlayer? =
+                MediaPlayer.create(this, R.raw.lo_que_te_voy_a_decir_hoy)
+            mediaPlayer?.start()
+        }
+        mirandolos.setOnClickListener {
+            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.mirandolos)
+            mediaPlayer?.start()
+        }
+        quieroVerlos.setOnClickListener {
+            val mediaPlayer: MediaPlayer? =
+                MediaPlayer.create(this, R.raw.quiero_verlos_a_todos_ahi)
+            mediaPlayer?.start()
+        }
+        risa1.setOnClickListener {
+            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.risa1)
+            mediaPlayer?.start()
+        }
+        sii.setOnClickListener {
+            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.si)
+            mediaPlayer?.start()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -212,7 +254,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.bredes -> {
+            R.id.bRedes -> {
                 val intent = Intent(this, Redes::class.java)
                 startActivity(intent)
             }
