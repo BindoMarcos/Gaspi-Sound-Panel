@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity() {
         val quieroVerlos = findViewById<Button>(R.id.bQuieroVerlos)
         val risa1 = findViewById<Button>(R.id.bRisa1)
         val sii = findViewById<Button>(R.id.bSi)
+        val binomo = findViewById<Button>(R.id.bBinomo)
 
 
         fiumba.setOnClickListener {
@@ -243,6 +244,10 @@ class MainActivity : AppCompatActivity() {
         }
         sii.setOnClickListener {
             val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.si)
+            mediaPlayer?.start()
+        }
+        binomo.setOnClickListener{
+            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.binomo)
             mediaPlayer?.start()
         }
     }
