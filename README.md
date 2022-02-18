@@ -1,4 +1,4 @@
-# Sound panel of Gaspi
+# _Sound panel of Gaspi_
 
 Gaspi is an Argentinian character that make funny sounds, in this app you can play most of them.
 
